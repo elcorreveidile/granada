@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandía en movimiento</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="scene" aria-labelledby="scene-title">
+      <h1 id="scene-title">Ahora ya no le gusta tanto la fruta</h1>
+      <figure class="character">
+        <div
+          class="portrait"
+          role="img"
+          aria-label="Ilustración de Isabel Díaz Ayuso lista para recibir un trozo de sandía"
+        >
+          <img src="assets/ayuso-illustration.svg" alt="" />
+          <div class="mouth" aria-hidden="true"></div>
+        </div>
+        <figcaption>
+          <strong>Isabel Díaz Ayuso</strong>
+          <span>Presidenta de la Comunidad de Madrid</span>
+        </figcaption>
+      </figure>
+      <div class="watermelon" role="img" aria-label="Sandía sonriente">
+        <div class="watermelon-face" aria-hidden="true">
+          <span class="smile"></span>
+        </div>
+      </div>
+    </main>
+    <div class="controls">
+      <button id="feedButton" type="button">Dale de comer</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

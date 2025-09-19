@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960">
+  <title>Ilustración de Isabel Díaz Ayuso</title>
+  <rect width="720" height="960" fill="#d8b89b" />
+  <rect x="60" y="70" width="600" height="820" rx="42" fill="#f2d9bf" />
+  <rect x="90" y="110" width="540" height="760" rx="36" fill="#f7e8d8" />
+  <text x="360" y="188" text-anchor="middle" font-size="44" font-family="'Futura', 'Raleway', 'Montserrat', sans-serif" font-weight="700" letter-spacing="0.1em" fill="#3c2423">¡SACAD VUESTRAS</text>
+  <text x="360" y="242" text-anchor="middle" font-size="44" font-family="'Futura', 'Raleway', 'Montserrat', sans-serif" font-weight="700" letter-spacing="0.08em" fill="#3c2423">SUCIAS PALOMAS</text>
+  <text x="360" y="296" text-anchor="middle" font-size="44" font-family="'Futura', 'Raleway', 'Montserrat', sans-serif" font-weight="700" letter-spacing="0.08em" fill="#3c2423">DE LA PAZ DE LAS</text>
+  <text x="360" y="350" text-anchor="middle" font-size="44" font-family="'Futura', 'Raleway', 'Montserrat', sans-serif" font-weight="700" letter-spacing="0.08em" fill="#3c2423">ESCUELAS!</text>
+  <g transform="translate(0,20)">
+    <path d="M170 380 C180 260 260 210 360 210 C460 210 530 260 550 380 L585 760 C515 832 442 872 360 872 C278 872 205 832 135 760 Z" fill="#321c26" />
+    <path d="M210 690 Q360 612 510 690 L520 760 Q452 810 360 810 Q268 810 200 760 Z" fill="#2d1b24" />
+    <ellipse cx="360" cy="520" rx="122" ry="156" fill="#f5d8c2" />
+    <path d="M242 506 Q360 448 478 506 Q470 630 360 630 Q250 630 242 506 Z" fill="#f2d0b9" />
+    <path d="M270 435 Q310 320 360 320 Q410 320 450 435" fill="none" stroke="#2a151b" stroke-width="10" stroke-linecap="round" />
+    <path d="M238 542 Q280 515 320 542" fill="none" stroke="#231417" stroke-width="8" stroke-linecap="round" />
+    <path d="M400 542 Q440 515 482 542" fill="none" stroke="#231417" stroke-width="8" stroke-linecap="round" />
+    <ellipse cx="305" cy="520" rx="26" ry="20" fill="#221116" />
+    <ellipse cx="415" cy="520" rx="26" ry="20" fill="#221116" />
+    <ellipse cx="305" cy="516" rx="10" ry="6" fill="#f7f3ef" />
+    <ellipse cx="415" cy="516" rx="10" ry="6" fill="#f7f3ef" />
+    <path d="M333 566 Q360 548 387 566" fill="none" stroke="#7e3a3f" stroke-width="8" stroke-linecap="round" />
+    <path d="M300 602 Q360 640 420 602 Q408 636 360 648 Q312 636 300 602 Z" fill="#601c29" />
+    <path d="M324 606 Q360 626 396 606 Q388 620 360 628 Q332 620 324 606 Z" fill="#e3c6b5" />
+    <path d="M302 676 Q360 652 418 676 Q410 706 360 716 Q310 706 302 676 Z" fill="#0f172a" />
+    <path d="M290 700 Q360 740 430 700 L450 792 Q360 828 270 792 Z" fill="#fdf1e7" />
+    <path d="M156 748 Q262 690 360 690 Q458 690 564 748 L576 786 Q466 854 360 854 Q254 854 144 786 Z" fill="#41242e" opacity="0.85" />
+  </g>
+  <text x="120" y="840" font-size="32" font-family="'Futura', 'Raleway', 'Montserrat', sans-serif" font-weight="600" fill="#3c2423">@elpais_opinion</text>
+  <text x="360" y="888" font-size="48" font-family="'Playfair Display', 'Times New Roman', serif" font-weight="700" fill="#3c2423" text-anchor="middle">EL PAÍS</text>
+</svg>
