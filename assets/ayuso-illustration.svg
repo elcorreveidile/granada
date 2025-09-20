@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Retrato vectorial de Isabel Díaz Ayuso</title>
+  <desc id="desc">
+    Ilustración minimalista inspirada en una fotografía de Isabel Díaz Ayuso frente a un fondo rojo con banderas
+    de España y de la Comunidad de Madrid.
+  </desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f04646" />
+      <stop offset="0.5" stop-color="#d2232a" />
+      <stop offset="1" stop-color="#a0121c" />
+    </linearGradient>
+    <radialGradient id="face-shade" cx="50%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#f6dac7" />
+      <stop offset="0.7" stop-color="#eec4b0" />
+      <stop offset="1" stop-color="#d9a995" />
+    </radialGradient>
+    <radialGradient id="lip-shade" cx="50%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ff9a9f" />
+      <stop offset="0.7" stop-color="#e22e3f" />
+      <stop offset="1" stop-color="#9b1524" />
+    </radialGradient>
+    <radialGradient id="cheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffc5c7" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#ffc5c7" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg)" />
+
+  <g opacity="0.95">
+    <rect x="470" y="90" width="60" height="350" fill="#ae171d" />
+    <rect x="470" y="150" width="60" height="230" fill="#f4cd33" />
+    <rect x="470" y="90" width="60" height="40" fill="#b91f26" />
+    <rect x="470" y="360" width="60" height="80" fill="#b91f26" />
+  </g>
+
+  <g opacity="0.9">
+    <rect x="520" y="120" width="56" height="320" rx="6" fill="#b41526" />
+    <g fill="#f5f5f5" transform="translate(548 150) scale(0.9)">
+      <polygon points="-20,0 -14,10 -2,12 -10,20 -8,32 -20,26 -32,32 -30,20 -38,12 -26,10" />
+      <polygon points="-20,60 -14,70 -2,72 -10,80 -8,92 -20,86 -32,92 -30,80 -38,72 -26,70" />
+      <polygon points="-20,120 -14,130 -2,132 -10,140 -8,152 -20,146 -32,152 -30,140 -38,132 -26,130" />
+      <polygon points="-20,180 -14,190 -2,192 -10,200 -8,212 -20,206 -32,212 -30,200 -38,192 -26,190" />
+    </g>
+  </g>
+
+  <g transform="translate(0,-10)">
+    <path
+      d="M168 258 C140 302 132 374 156 436 C174 480 140 556 174 636 C206 712 268 742 336 732 C398 724 446 676 454 608 C460 552 488 504 480 430 C470 332 420 248 324 236 C266 228 210 236 168 258 Z"
+      fill="#3f2729"
+    />
+    <path
+      d="M190 620 C210 654 264 706 332 704 C406 704 448 646 454 612 C444 674 390 728 314 734 C250 738 206 702 190 620 Z"
+      fill="#31191a"
+      opacity="0.85"
+    />
+    <path
+      d="M248 684 Q300 712 352 684 L368 780 Q314 808 258 780 Z"
+      fill="#121212"
+    />
+    <path d="M246 660 Q300 632 354 660 Q342 708 300 712 Q258 708 246 660 Z" fill="#1d1d1d" />
+
+    <path
+      d="M232 318 C212 370 212 472 240 538 C260 586 300 614 342 606 C376 600 410 566 424 520 C440 468 440 382 412 332 C390 294 350 270 300 274 C270 276 246 294 232 318 Z"
+      fill="url(#face-shade)"
+    />
+    <path
+      d="M284 534 C296 542 308 544 320 544 C332 544 346 542 360 532 C354 564 332 584 320 584 C300 584 286 564 284 534 Z"
+      fill="#d79d93"
+      opacity="0.6"
+    />
+
+    <ellipse cx="266" cy="492" rx="46" ry="52" fill="url(#cheek)" />
+    <ellipse cx="364" cy="492" rx="44" ry="50" fill="url(#cheek)" />
+
+    <path d="M254 430 Q260 392 282 376 Q300 368 318 376 Q340 386 346 430" fill="none" stroke="#432b29" stroke-width="8" stroke-linecap="round" />
+    <path d="M212 422 Q236 410 262 420" fill="none" stroke="#2d1a19" stroke-width="9" stroke-linecap="round" />
+    <path d="M338 420 Q362 410 388 422" fill="none" stroke="#2d1a19" stroke-width="9" stroke-linecap="round" />
+
+    <ellipse cx="256" cy="458" rx="24" ry="20" fill="#1c1414" />
+    <ellipse cx="352" cy="458" rx="24" ry="20" fill="#1c1414" />
+    <ellipse cx="250" cy="452" rx="9" ry="7" fill="#f7f7f7" />
+    <ellipse cx="346" cy="452" rx="9" ry="7" fill="#f7f7f7" />
+
+    <path d="M302 476 Q314 488 324 476" fill="none" stroke="#b67468" stroke-width="6" stroke-linecap="round" />
+
+    <path
+      d="M268 514 C288 536 308 544 328 544 C348 544 370 536 386 514 C384 536 362 560 328 562 C292 560 272 536 268 514 Z"
+      fill="url(#lip-shade)"
+    />
+    <path d="M288 516 Q320 530 352 516" fill="none" stroke="#7f1121" stroke-width="5" stroke-linecap="round" />
+
+    <path d="M312 332 Q304 354 308 376" fill="none" stroke="#8d5f54" stroke-width="5" stroke-linecap="round" />
+
+    <path d="M220 350 C240 300 278 270 320 268 C362 270 404 302 420 352" fill="none" stroke="#221314" stroke-width="18" stroke-linecap="round" />
+
+    <path
+      d="M220 338 C210 378 214 430 230 464 C240 486 240 516 226 542 C214 566 208 602 222 624 C238 648 258 632 260 604 C262 568 286 540 314 536 C270 520 238 494 228 452 C220 422 218 382 220 338 Z"
+      fill="#3f2729"
+    />
+
+    <path
+      d="M410 338 C418 374 416 426 402 458 C392 480 392 512 404 536 C414 560 420 600 410 620 C400 642 382 630 380 602 C378 564 362 546 330 536 C374 520 402 492 408 452 C412 424 412 382 410 338 Z"
+      fill="#3b2628"
+    />
+
+    <ellipse cx="302" cy="588" rx="32" ry="34" fill="#e4b7a4" />
+    <path d="M284 586 Q302 600 320 586" fill="none" stroke="#d49c8c" stroke-width="10" stroke-linecap="round" />
+
+    <path d="M230 576 Q248 624 302 626 Q358 624 378 574" fill="#111" opacity="0.95" />
+  </g>
+
+  <rect x="210" y="760" width="180" height="28" rx="12" fill="#2b2b2c" opacity="0.65" />
+</svg>
