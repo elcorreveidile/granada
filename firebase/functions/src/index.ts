@@ -70,8 +70,12 @@ interface BookingRepository {
   listActiveBookingsForDate(
     dateIso: string,
     employeeIds: string[],
+    transaction?: FirebaseFirestore.Transaction,
   ): Promise<Array<Booking & { id: string }>>;
-  createBooking(data: Omit<Booking, 'id'>): Promise<string>;
+  createBooking(
+    data: Omit<Booking, 'id'>,
+    transaction?: FirebaseFirestore.Transaction,
+  ): Promise<string>;
   getBookingById(id: string): Promise<(Booking & { id: string }) | null>;
   updateBooking(id: string, data: Partial<Booking>): Promise<void>;
 }
@@ -89,6 +93,7 @@ class FirestoreBookingRepository implements BookingRepository {
   async listActiveBookingsForDate(
     dateIso: string,
     employeeIds: string[],
+    transaction?: FirebaseFirestore.Transaction,
   ): Promise<Array<Booking & { id: string }>> {
     const start = DateTime.fromISO(dateIso, { zone: TIMEZONE }).startOf('day');
     const end = start.endOf('day');
@@ -102,14 +107,26 @@ class FirestoreBookingRepository implements BookingRepository {
       query = query.where('employeeId', '==', employeeIds[0]);
     }
 
-    const snapshot = await query.get();
+    const snapshot = transaction ? await transaction.get(query) : await query.get();
     return snapshot.docs
       .filter((doc) => employeeIds.includes(doc.get('employeeId')))
       .map((doc) => ({ id: doc.id, ...(doc.data() as Booking) }));
   }
 
-  async createBooking(data: Omit<Booking, 'id'>): Promise<string> {
-    const docRef = await this.firestore.collection(BOOKINGS_COLLECTION).add({
+  async createBooking(
+    data: Omit<Booking, 'id'>,
+    transaction?: FirebaseFirestore.Transaction,
+  ): Promise<string> {
+    const collection = this.firestore.collection(BOOKINGS_COLLECTION);
+    const docRef = collection.doc();
+    if (transaction) {
+      transaction.set(docRef, {
+        ...data,
+      });
+      return docRef.id;
+    }
+
+    await docRef.set({
       ...data,
     });
     return docRef.id;
@@ -298,22 +315,7 @@ class BookingService {
       );
     }
 
-    const bookings = await this.repository.listActiveBookingsForDate(start.toISODate(), [employee]);
-    const overlaps = bookings.some((booking) => {
-      const existing = Interval.fromDateTimes(
-        DateTime.fromJSDate(booking.startTime.toDate()).setZone(TIMEZONE),
-        DateTime.fromJSDate(booking.endTime.toDate()).setZone(TIMEZONE),
-      );
-      const candidate = Interval.fromDateTimes(start, end);
-      return existing.overlaps(candidate);
-    });
-
-    if (overlaps) {
-      throw new functions.https.HttpsError(
-        'already-exists',
-        'El horario seleccionado ya está reservado.',
-      );
-    }
+    const candidateInterval = Interval.fromDateTimes(start, end);
 
     const bookingData: Omit<Booking, 'id'> = {
       clientName: clientName.trim(),
@@ -330,7 +332,41 @@ class BookingService {
       googleEventId: null,
     };
 
-    const bookingId = await this.repository.createBooking(bookingData);
+    const bookingId = await db
+      .runTransaction(async (transaction) => {
+        const bookings = await this.repository.listActiveBookingsForDate(
+          start.toISODate(),
+          [employeeInfo.id],
+          transaction,
+        );
+
+        const hasOverlap = bookings.some((booking) => {
+          const existing = Interval.fromDateTimes(
+            DateTime.fromJSDate(booking.startTime.toDate()).setZone(TIMEZONE),
+            DateTime.fromJSDate(booking.endTime.toDate()).setZone(TIMEZONE),
+          );
+          return existing.overlaps(candidateInterval);
+        });
+
+        if (hasOverlap) {
+          throw new functions.https.HttpsError(
+            'already-exists',
+            'El horario seleccionado ya está reservado.',
+          );
+        }
+
+        return this.repository.createBooking(bookingData, transaction);
+      })
+      .catch((error) => {
+        if (error instanceof functions.https.HttpsError) {
+          throw error;
+        }
+
+        throw new functions.https.HttpsError(
+          'internal',
+          'No se pudo crear la reserva. Inténtalo de nuevo más tarde.',
+        );
+      });
     const bookingForSync: Booking & { id: string } = {
       ...bookingData,
       id: bookingId,
