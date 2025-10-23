@@ -5,16 +5,16 @@
       "queryScope": "COLLECTION",
       "fields": [
         {"fieldPath": "employeeId", "order": "ASCENDING"},
-        {"fieldPath": "startTime", "order": "ASCENDING"},
-        {"fieldPath": "status", "order": "ASCENDING"}
+        {"fieldPath": "status", "order": "ASCENDING"},
+        {"fieldPath": "startTime", "order": "ASCENDING"}
       ]
     },
     {
       "collectionGroup": "bookings",
       "queryScope": "COLLECTION",
       "fields": [
-        {"fieldPath": "startTime", "order": "ASCENDING"},
-        {"fieldPath": "status", "order": "ASCENDING"}
+        {"fieldPath": "status", "order": "ASCENDING"},
+        {"fieldPath": "startTime", "order": "ASCENDING"}
       ]
     }
   ],
