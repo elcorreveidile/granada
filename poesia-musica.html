@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz y palabra para Soledades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+        }
+        
+        .background-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(180, 30, 30, 0.2) 0%, rgba(120, 20, 20, 0.1) 70%, transparent 100%);
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 500px;
+            height: 500px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .shape-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -50px;
+            left: -100px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-family: 'Crimson Text', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: #e63946;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+            overflow: visible;
+        }
+        
+        .subtitle {
+            font-family: 'Crimson Text', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #f1faee;
+            margin-bottom: 5px;
+        }
+        
+        .description {
+            font-size: 18px;
+            font-weight: 300;
+            color: #a8dadc;
+            margin-bottom: 20px;
+        }
+        
+        .images-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 40px;
+        }
+        
+        .image-card {
+            width: 48%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover img {
+            transform: scale(1.03);
+        }
+        
+        .event-info {
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid #e63946;
+        }
+        
+        .event-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #e63946;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .event-title .material-icons {
+            margin-right: 10px;
+        }
+        
+        .event-details {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .event-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .event-details .material-icons {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #a8dadc;
+        }
+        
+        .presenters {
+            font-weight: 500;
+        }
+        
+        .presenters-list {
+            margin-left: 28px;
+            margin-top: 5px;
+        }
+        
+        .presenter-name {
+            margin-bottom: 8px;
+            color: #e63946;
+            font-weight: 500;
+        }
+        
+        .publisher {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 20px;
+            font-size: 18px;
+            color: #a8dadc;
+        }
+        
+        .publisher span {
+            font-weight: 600;
+            color: #f1faee;
+        }
+        
+        .highlight {
+            color: #e63946;
+            font-weight: 500;
+        }
+        
+        .decorative-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #e63946, transparent);
+            margin: 20px auto;
+        }
+        
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .poster-container {
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 48px;
+                letter-spacing: -1px;
+            }
+            
+            .subtitle {
+                font-size: 28px;
+            }
+            
+            .description {
+                font-size: 16px;
+            }
+            
+            .images-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            
+            .event-info {
+                padding: 20px;
+            }
+            
+            .event-title {
+                font-size: 20px;
+            }
+            
+            .event-details {
+                font-size: 16px;
+            }
+            
+            .publisher {
+                font-size: 16px;
+            }
+        }
+        
+        /* Estilos para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .title {
+                font-size: 36px;
+                letter-spacing: 0;
+            }
+            
+            .subtitle {
+                font-size: 24px;
+            }
+            
+            .description {
+                font-size: 14px;
+            }
+            
+            .image-card {
+                width: 90%;
+            }
+            
+            .event-info {
+                padding: 15px;
+            }
+            
+            .event-title {
+                font-size: 18px;
+            }
+            
+            .event-details {
+                font-size: 14px;
+            }
+            
+            .publisher {
+                font-size: 14px;
+            }
+        }
+        
+        /* Estilos para impresión */
+        @media print {
+            body {
+                background-color: white;
+                display: block;
+            }
+            
+            .poster-container {
+                width: 100%;
+                height: auto;
+                background: white;
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+                page-break-after: always;
+            }
+            
+            .background-shape {
+                display: none;
+            }
+            
+            .title {
+                color: #000;
+                text-shadow: none;
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                color: #000;
+                font-size: 24px;
+            }
+            
+            .description {
+                color: #333;
+                font-size: 16px;
+            }
+            
+            .event-info {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-left: 4px solid #000;
+            }
+            
+            .event-title {
+                color: #000;
+            }
+            
+            .event-details {
+                color: #333;
+            }
+            
+            .event-details .material-icons {
+                color: #666;
+            }
+            
+            .presenter-name {
+                color: #000;
+            }
+            
+            .publisher {
+                color: #333;
+            }
+            
+            .publisher span {
+                color: #000;
+            }
+            
+            .highlight {
+                color: #000;
+            }
+            
+            .decorative-line {
+                background: linear-gradient(90deg, transparent, #000, transparent);
+            }
+            
+            .image-card {
+                border: 1px solid #ddd;
+            }
+            
+            .event-title .material-icons {
+                display: none;
+            }
+            
+            .event-details .material-icons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <div class="background-shape shape-1"></div>
+        <div class="background-shape shape-2"></div>
+        
+        <div class="content">
+            <div class="header">
+                <h1 class="title">Voz y palabra<br>para Soledades</h1>
+                <h2 class="subtitle">Javier Egea</h2>
+                <p class="description">Música y poesía</p>
+            </div>
+            
+            <div class="decorative-line"></div>
+            
+            <div class="images-container">
+                <div class="image-card">
+                    <img src="https://z-cdn-media.chatglm.cn/files/e566ef2f-12a8-4da9-ace7-951d2a0a4ce5_egea.png?auth_key=1793553843-cdaf298d54134ef08c3a40c2ba8aa4eb-0-dd39404e69e9a52330a311497eb78358" alt="Javier Egea">
+                </div>
+                <div class="image-card">
+                    <img src="https://z-cdn-media.chatglm.cn/files/ba5a4a09-06d0-41b6-ab12-fbde992b79c2_9fb2e8bd-95ee-45f6-9b0a-ad45b796b74a.JPG?auth_key=1793553843-20c59445bba04e5eb84a4929950462fb-0-e639ec5a456b377031bc2d28e6f8ae58" alt="Soledades">
+                </div>
+            </div>
+            
+            <div class="event-info">
+                <h3 class="event-title">
+                    <i class="material-icons">music_note</i>
+                    Música y poesía
+                </h3>
+                <div class="event-details">
+                    <p><i class="material-icons">calendar_today</i> <span class="highlight">Miércoles, 5 de noviembre</span></p>
+                    <p><i class="material-icons">access_time</i> 20:00 horas</p>
+                    <p><i class="material-icons">location_on</i> Corrala De Santiago<br>Calle Santiago número 7, Granada</p>
+                    <p class="presenters"><i class="material-icons">people</i> Participan:</p>
+                    <div class="presenters-list">
+                        <p class="presenter-name">Raúl Alcover</p>
+                        <p class="presenter-name">Alendra</p>
+                        <p class="presenter-name">Pedro Soriano</p>
+                        <p class="presenter-name">Enrique Moratalla</p>
+                        <p class="presenter-name">Juan Pinilla</p>
+                        <p class="presenter-name">Enrique Alides</p>
+                        <p class="presenter-name">Javier Cobos</p>
+                        <p class="presenter-name">Poetas de la Asociación del Diente de Oro</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publisher">
+                <p>Publicado por <span>Ediciones Hiperión</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
