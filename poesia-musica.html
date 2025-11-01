@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olvidos y Soledades</title>
+    <title>Voz y palabra para Soledades</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -71,7 +71,7 @@
         
         .title {
             font-family: 'Crimson Text', serif;
-            font-size: 80px;
+            font-size: 72px;
             font-weight: 700;
             color: #e63946;
             letter-spacing: -1px;
@@ -167,6 +167,13 @@
         .presenters-list {
             margin-left: 28px;
             margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .presenters-column {
+            width: 48%;
         }
         
         .presenter-name {
@@ -208,7 +215,7 @@
             }
             
             .title {
-                font-size: 60px;
+                font-size: 48px;
                 letter-spacing: -1px;
             }
             
@@ -245,12 +252,20 @@
             .publisher {
                 font-size: 16px;
             }
+            
+            .presenters-list {
+                flex-direction: column;
+            }
+            
+            .presenters-column {
+                width: 100%;
+            }
         }
         
         /* Estilos para pantallas muy pequeñas */
         @media (max-width: 480px) {
             .title {
-                font-size: 48px;
+                font-size: 36px;
                 letter-spacing: 0;
             }
             
@@ -307,7 +322,7 @@
             .title {
                 color: #000;
                 text-shadow: none;
-                font-size: 48px;
+                font-size: 36px;
             }
             
             .subtitle {
@@ -379,9 +394,9 @@
         
         <div class="content">
             <div class="header">
-                <h1 class="title">Olvidos y<br>Soledades</h1>
+                <h1 class="title">Voz y palabra<br>para Soledades</h1>
                 <h2 class="subtitle">Javier Egea</h2>
-                <p class="description">Coloquio</p>
+                <p class="description">Música y poesía</p>
             </div>
             
             <div class="decorative-line"></div>
@@ -397,19 +412,27 @@
             
             <div class="event-info">
                 <h3 class="event-title">
-                    <i class="material-icons">forum</i>
-                    Coloquio
+                    <i class="material-icons">music_note</i>
+                    Música y poesía
                 </h3>
                 <div class="event-details">
-                    <p><i class="material-icons">calendar_today</i> <span class="highlight">Jueves, 6 de noviembre</span></p>
+                    <p><i class="material-icons">calendar_today</i> <span class="highlight">Miércoles, 5 de noviembre</span></p>
                     <p><i class="material-icons">access_time</i> 20:00 horas</p>
                     <p><i class="material-icons">location_on</i> Corrala De Santiago<br>Calle Santiago número 7, Granada</p>
                     <p class="presenters"><i class="material-icons">people</i> Participan:</p>
                     <div class="presenters-list">
-                        <p class="presenter-name">Javier Benítez</p>
-                        <p class="presenter-name">Ramón Repiso</p>
-                        <p class="presenter-name">José Rienda</p>
-                        <p class="presenter-name">Marga Blanco</p>
+                        <div class="presenters-column">
+                            <p class="presenter-name">Raúl Alcover</p>
+                            <p class="presenter-name">Alendra</p>
+                            <p class="presenter-name">Pedro Soriano</p>
+                            <p class="presenter-name">Enrique Moratalla</p>
+                        </div>
+                        <div class="presenters-column">
+                            <p class="presenter-name">Juan Pinilla</p>
+                            <p class="presenter-name">Enrique Alides</p>
+                            <p class="presenter-name">Javier Cobos</p>
+                            <p class="presenter-name">Poetas de la Asociación del Diente de Oro</p>
+                        </div>
                     </div>
                 </div>
             </div>
