@@ -78,6 +78,8 @@
             line-height: 1;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+            overflow: visible;
         }
         
         .subtitle {
@@ -196,6 +198,89 @@
             height: 3px;
             background: linear-gradient(90deg, transparent, #e63946, transparent);
             margin: 20px auto;
+        }
+        
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .poster-container {
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 60px;
+                letter-spacing: -1px;
+            }
+            
+            .subtitle {
+                font-size: 28px;
+            }
+            
+            .description {
+                font-size: 16px;
+            }
+            
+            .images-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .image-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            
+            .event-info {
+                padding: 20px;
+            }
+            
+            .event-title {
+                font-size: 20px;
+            }
+            
+            .event-details {
+                font-size: 16px;
+            }
+            
+            .publisher {
+                font-size: 16px;
+            }
+        }
+        
+        /* Estilos para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .title {
+                font-size: 48px;
+                letter-spacing: 0;
+            }
+            
+            .subtitle {
+                font-size: 24px;
+            }
+            
+            .description {
+                font-size: 14px;
+            }
+            
+            .image-card {
+                width: 90%;
+            }
+            
+            .event-info {
+                padding: 15px;
+            }
+            
+            .event-title {
+                font-size: 18px;
+            }
+            
+            .event-details {
+                font-size: 14px;
+            }
+            
+            .publisher {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
