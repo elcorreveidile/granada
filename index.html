@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soledades, de Javier Egea</title>
+    <title>Soledades de Javier Egea</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -25,7 +25,7 @@
         
         .poster-container {
             width: 720px;
-            min-height: 1280px;
+            min-height: 960px;
             background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
             position: relative;
             overflow: hidden;
@@ -162,6 +162,17 @@
             font-weight: 500;
         }
         
+        .presenters-list {
+            margin-left: 28px;
+            margin-top: 5px;
+        }
+        
+        .presenter-name {
+            margin-bottom: 8px;
+            color: #e63946;
+            font-weight: 500;
+        }
+        
         .publisher {
             text-align: center;
             margin-top: auto;
@@ -220,7 +231,11 @@
                     <p><i class="material-icons">calendar_today</i> <span class="highlight">Martes, 4 de noviembre</span></p>
                     <p><i class="material-icons">access_time</i> 20:00 horas</p>
                     <p><i class="material-icons">location_on</i> Corrala De Santiago<br>Calle Santiago número 7, Granada</p>
-                    <p class="presenters"><i class="material-icons">person</i> Presentan: <span class="highlight">Antonio Molina Flores</span> y <span class="highlight">Félix Martín Gijón</span> (prologuista)</p>
+                    <p class="presenters"><i class="material-icons">person</i> Presentan:</p>
+                    <div class="presenters-list">
+                        <p class="presenter-name">Antonio Molina Flores</p>
+                        <p class="presenter-name">Félix Martín Gijón (prologuista)</p>
+                    </div>
                 </div>
             </div>
             
