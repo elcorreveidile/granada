@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voz y palabra para Soledades</title>
+    <title>Soledades de Javier Egea</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -71,14 +71,14 @@
         
         .title {
             font-family: 'Crimson Text', serif;
-            font-size: 72px;
+            font-size: 90px;
             font-weight: 700;
             color: #e63946;
-            letter-spacing: -1px;
-            line-height: 1.1;
+            letter-spacing: -2px;
+            line-height: 1;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            white-space: normal;
+            white-space: nowrap;
             overflow: visible;
         }
         
@@ -167,13 +167,6 @@
         .presenters-list {
             margin-left: 28px;
             margin-top: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .presenters-column {
-            width: 48%;
         }
         
         .presenter-name {
@@ -255,7 +248,7 @@
             }
             
             .title {
-                font-size: 48px;
+                font-size: 60px;
                 letter-spacing: -1px;
             }
             
@@ -310,7 +303,7 @@
         /* Estilos para pantallas muy pequeñas */
         @media (max-width: 480px) {
             .title {
-                font-size: 36px;
+                font-size: 48px;
                 letter-spacing: 0;
             }
             
@@ -376,7 +369,7 @@
             .title {
                 color: #000;
                 text-shadow: none;
-                font-size: 36px;
+                font-size: 48px;
             }
             
             .subtitle {
@@ -452,9 +445,9 @@
         
         <div class="content">
             <div class="header">
-                <h1 class="title">Voz y palabra<br>para Soledades</h1>
+                <h1 class="title">SOLEDADES</h1>
                 <h2 class="subtitle">Javier Egea</h2>
-                <p class="description">Música y poesía</p>
+                <p class="description">Antología personal (1970-1990)</p>
             </div>
             
             <div class="decorative-line"></div>
@@ -464,4 +457,47 @@
                     <img src="https://z-cdn-media.chatglm.cn/files/e566ef2f-12a8-4da9-ace7-951d2a0a4ce5_egea.png?auth_key=1793553843-cdaf298d54134ef08c3a40c2ba8aa4eb-0-dd39404e69e9a52330a311497eb78358" alt="Javier Egea">
                 </div>
                 <div class="image-card">
-                    <img src="https://
+                    <img src="https://z-cdn-media.chatglm.cn/files/ba5a4a09-06d0-41b6-ab12-fbde992b79c2_9fb2e8bd-95ee-45f6-9b0a-ad45b796b74a.JPG?auth_key=1793553843-20c59445bba04e5eb84a4929950462fb-0-e639ec5a456b377031bc2d28e6f8ae58" alt="Soledades">
+                </div>
+            </div>
+            
+            <div class="event-info">
+                <h3 class="event-title">
+                    <i class="material-icons">event</i>
+                    Presentación del libro
+                </h3>
+                <div class="event-details">
+                    <p><i class="material-icons">calendar_today</i> <span class="highlight">Martes, 4 de noviembre</span></p>
+                    <p><i class="material-icons">access_time</i> 20:00 horas</p>
+                    <p><i class="material-icons">location_on</i> Corrala De Santiago<br>Calle Santiago número 7, Granada</p>
+                    <p class="presenters"><i class="material-icons">person</i> Presentan:</p>
+                    <div class="presenters-list">
+                        <p class="presenter-name">Antonio Molina Flores</p>
+                        <p class="presenter-name">Félix Martín Gijón (prologuista)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publisher">
+                <p>Publicado por <span>Ediciones Hiperión</span></p>
+            </div>
+            
+            <!-- Navegación entre jornadas -->
+            <div class="navigation">
+                <a href="#" class="nav-item active">
+                    <i class="material-icons">event</i>
+                    <span>Día 4</span>
+                </a>
+                <a href="poesía-musica.html" class="nav-item">
+                    <i class="material-icons">music_note</i>
+                    <span>Día 5</span>
+                </a>
+                <a href="coloquio.html" class="nav-item">
+                    <i class="material-icons">forum</i>
+                    <span>Día 6</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
