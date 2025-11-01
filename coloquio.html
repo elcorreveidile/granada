@@ -200,6 +200,46 @@
             margin: 20px auto;
         }
         
+        /* Navegación entre jornadas */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #a8dadc;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .nav-item:hover {
+            color: #e63946;
+            background-color: rgba(230, 57, 70, 0.1);
+        }
+        
+        .nav-item.active {
+            color: #e63946;
+            background-color: rgba(230, 57, 70, 0.2);
+        }
+        
+        .nav-item .material-icons {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .nav-item span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
         /* Estilos para dispositivos móviles */
         @media (max-width: 768px) {
             .poster-container {
@@ -245,6 +285,19 @@
             .publisher {
                 font-size: 16px;
             }
+            
+            .nav-item {
+                margin: 0 5px;
+                padding: 5px;
+            }
+            
+            .nav-item .material-icons {
+                font-size: 20px;
+            }
+            
+            .nav-item span {
+                font-size: 12px;
+            }
         }
         
         /* Estilos para pantallas muy pequeñas */
@@ -280,6 +333,15 @@
             
             .publisher {
                 font-size: 14px;
+            }
+            
+            .navigation {
+                flex-wrap: wrap;
+            }
+            
+            .nav-item {
+                width: 30%;
+                margin: 5px;
             }
         }
         
@@ -369,6 +431,10 @@
             .event-details .material-icons {
                 display: none;
             }
+            
+            .navigation {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -416,6 +482,22 @@
             
             <div class="publisher">
                 <p>Publicado por <span>Ediciones Hiperión</span></p>
+            </div>
+            
+            <!-- Navegación entre jornadas -->
+            <div class="navigation">
+                <a href="soledades-javier-egea.html" class="nav-item">
+                    <i class="material-icons">event</i>
+                    <span>Día 4</span>
+                </a>
+                <a href="poesía-musica.html" class="nav-item">
+                    <i class="material-icons">music_note</i>
+                    <span>Día 5</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="material-icons">forum</i>
+                    <span>Día 6</span>
+                </a>
             </div>
         </div>
     </div>
